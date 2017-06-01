@@ -11,7 +11,7 @@ angular.module('admin', ['ngCookies', 'ui.bootstrap', 'ngFileUpload'])
 	vm.adminData.answer;
 	vm.error = false;
 	vm.addquestion = addquestion;
-
+    vm.counts=1;
 
 	function addquestion() {
 		submit();
@@ -34,11 +34,15 @@ angular.module('admin', ['ngCookies', 'ui.bootstrap', 'ngFileUpload'])
 		return count;
 	}
 	vm.getChar = function(count) {
+		count=Number(count);
 		return String.fromCharCode('A'.charCodeAt() + count);
 	}
 	vm.cancel = function(count) {
 		vm.adminData = {};
 		vm.counter = 3;
+	}
+	vm.check=function(data) {
+	    return data.split(",");
 	}
 
 	function submit() {

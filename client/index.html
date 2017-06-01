@@ -14,7 +14,7 @@
 
 	<style>
 		html 					{ overflow-y:scroll; }
-		body 					{ padding-top:50px; }
+		body 					{  }
 		#todo-list 				{ margin-bottom:30px; }
 		#todo-form 	 			{ margin-bottom:50px; }
 	</style>
@@ -52,7 +52,9 @@
    <div>
       <ul class = "nav navbar-nav">
          <li><a href = "/" ng-show="$route.current.activetab != 'dashboard'">Login</a></li>
-         
+          <li> <a href = "/#!/admin">Dashboard</a></li>
+        <li> <a href = "/#!/admin/dashboard">Question List</a></li>
+         <li><a href = "/#!/admin/createtest">Create Test</a></li>
           <li><a href = "/api/logout" ng-show="$route.current.activetab == 'dashboard'" ng-click="logout()">LogOut</a></li>
       </ul>
    </div>

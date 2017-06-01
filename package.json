@@ -1,0 +1,21 @@
+{
+  "name": "test-task",
+  "version": "6.10.3",
+  "description": "Test generation for user.",
+  "main": "/server/server.js",
+  "author": "Sarang",
+  "dependencies": {
+    "body-parser": "*",
+    "express": "*",
+    "method-override": "*",
+    "mongodb": "*",
+    "mongoose": "*",
+    "mongoskin": "*",
+    "morgan": "*",
+    "multer": "*",
+    "express-session":"*",
+    "cookie-parser":"*",
+    "jwt-authentication":"*"
+
+  }
+}
