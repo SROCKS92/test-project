@@ -1,0 +1,3 @@
+export.module={
+    localUrl: 'mongodb://localhost:27017/testtask'
+};

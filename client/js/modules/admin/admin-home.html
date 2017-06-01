@@ -1,0 +1,42 @@
+<div class="form-container" >
+
+		<!-- HEADER AND TODO COUNT -->
+				<h1>Admin-Dashboard</h1>
+				<form>
+				 <div class="form-group">
+            <label for="username">Question</label>
+           	<input type="text" class="form-control input-lg text-center" style="width:45% !important" placeholder="Please enter the question here" ng-model="vm.adminData.question">
+
+           		<input type="text" class="form-control input-lg text-center" style="width:4%;margin-left:50%;margin-top:-4%; !important" placeholder="Options" ng-model="vm.counter">
+        </div>
+
+       <div class="form-group" style="margin-top:10px">
+            <label for="password">Answer</label>
+            <div class="question" style="padding:12px" ng-repeat="count in vm.getNumber()">
+            <span class="option" style="">{{vm.getChar(count)}}.</span>
+            <input type="text"  name="password"  class="form-control"  style="width:25%;margin-left:2%;margin-top: -2%" placeholder="Please enter the answer here" ng-model="vm.adminData.option[count]" required />
+            <img src="./assets/images/plus.png" style="margin-left:27%;margin-top: -4%" width="20" height="20" ng-click="vm.counter=vm.counter+1">
+
+            </div>
+             <div class="form-group">
+          <label>Photo Upload</label>
+         <button>Upload <input type="file" ngf-select="vm.upload($file)"></button>
+         </div>
+            <span>Correct Answer: </span>
+            <select ng-model="vm.adminData.answer">
+            	<option ng-repeat="count in vm.getNumber()" ng-selected="{{count==1}}" value="{{count}}">{{vm.getChar(count)}}</option>
+            </select>
+        </div>
+
+        <div class="form-groups">
+          <button type="submit" class="btn btn-primary btn-lg" style="float:left;margin-right:10%" ng-click="vm.addquestion()">Add Question</button>
+          
+        </div>
+          <div class="form-group">
+         <!--<button type="submit" class="btn btn-primary btn-lg" style="float:left;" ng-click="vm.submit()">Submit Questions</button>-->
+             <button type="submit" class="btn btn-primary btn-lg" style="float:left;margin-left:5%" ng-click="vm.cancel()">Cancel Questions</button>
+        </div>
+					
+                    </form>
+					
+		</div>
